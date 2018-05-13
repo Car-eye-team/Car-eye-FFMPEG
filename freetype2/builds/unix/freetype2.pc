@@ -1,0 +1,14 @@
+prefix=/home/NDK/ffmpeg/toolchain-android
+exec_prefix=/home/NDK/ffmpeg/toolchain-android
+libdir=/home/NDK/ffmpeg/toolchain-android/lib
+includedir=/home/NDK/ffmpeg/toolchain-android/include
+
+Name: FreeType 2
+URL: https://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 22.0.16
+Requires:
+Requires.private: libpng
+Libs: -L${libdir} -lfreetype
+Libs.private: -lz
+Cflags: -I${includedir}/freetype2
