@@ -1,0 +1,38 @@
+# pngcp.dfa
+#  Build time configuration of libpng
+#
+# Author: John Bowler
+# Copyright: (c) John Bowler, 2016
+# Usage rights:
+#  To the extent possible under law, the author has waived all copyright and
+#  related or neighboring rights to this work.  This work is published from:
+#  United States.
+#
+# Build libpng with support for pngcp.  This means just png_read_png,
+# png_write_png and small number of configuration settings.
+#
+everything = off
+
+# Options to turn on png_read_png and png_write_png:
+option WRITE_PNG on
+option READ_PNG on
+option EASY_ACCESS on
+option WRITE_16BIT on
+option SELECT_FILTER on
+
+# pngcp needs this to preserve unknown chunks, switching all these on means that
+# pngcp can work without explicit known chunk reading suppport
+option SAVE_UNKNOWN_CHUNKS on
+option WRITE_UNKNOWN_CHUNKS on
+
+# pngcp needs this to handle palette files with invalid indices:
+option CHECK_FOR_INVALID_INDEX on
+option GET_PALETTE_MAX on
+
+# this is used to turn off limits:
+option USER_LIMITS on
+option SET_USER_LIMITS on
+
+# these are are just required for specific customizations
+option WRITE_CUSTOMIZE_ZTXT_COMPRESSION on
+option WRITE_CUSTOMIZE_COMPRESSION on

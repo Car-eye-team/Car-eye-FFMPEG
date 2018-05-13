@@ -1,0 +1,162 @@
+pngwio.lo: pngwio.c pngpriv.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/stdlib.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/cdefs.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/cdefs_elf.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/android/api-level.h \
+ /home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stddef.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/string.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/malloc.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/xlocale.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/alloca.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/strings.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/types.h \
+ /home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdint.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/stdint.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/machine/wchar_limits.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/types.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/types.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/types.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/int-ll64.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/bitsperlong.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/bitsperlong.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/posix_types.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/stddef.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/compiler.h \
+ /home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/asm/posix_types.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/features.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/posix_types.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/posix_types_32.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/posix_types.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/sysmacros.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/memory.h config.h \
+ pnglibconf.h \
+ /home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/float.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/math.h \
+ /home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/limits.h \
+ /home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/syslimits.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/limits.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/limits.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/limits.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/syslimits.h \
+ png.h pngconf.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/stdio.h \
+ /home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdarg.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/setjmp.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/machine/setjmp.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/time.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/time.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/time.h \
+ pngstruct.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/zlib.h \
+ /home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/zconf.h pnginfo.h \
+ pngdebug.h
+
+pngpriv.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/stdlib.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/cdefs.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/cdefs_elf.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/android/api-level.h:
+
+/home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stddef.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/string.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/malloc.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/xlocale.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/alloca.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/strings.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/types.h:
+
+/home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdint.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/stdint.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/machine/wchar_limits.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/types.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/types.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/types.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/int-ll64.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/bitsperlong.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/bitsperlong.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/posix_types.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/stddef.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/compiler.h:
+
+/home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/asm/posix_types.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/features.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/posix_types.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm/posix_types_32.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/asm-generic/posix_types.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/sysmacros.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/memory.h:
+
+config.h:
+
+pnglibconf.h:
+
+/home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/float.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/math.h:
+
+/home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/limits.h:
+
+/home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/syslimits.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/limits.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/limits.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/limits.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/syslimits.h:
+
+png.h:
+
+pngconf.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/stdio.h:
+
+/home/NDK/ffmpeg/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdarg.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/setjmp.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/machine/setjmp.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/time.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/sys/time.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/linux/time.h:
+
+pngstruct.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/zlib.h:
+
+/home/NDK/ffmpeg/toolchain-android/sysroot/usr/include/zconf.h:
+
+pnginfo.h:
+
+pngdebug.h:
