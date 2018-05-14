@@ -1,7 +1,7 @@
-prefix=/home/NDK/ffmpeg/toolchain-android
-exec_prefix=/home/NDK/ffmpeg/toolchain-android
-libdir=/home/NDK/ffmpeg/toolchain-android/lib
-includedir=/home/NDK/ffmpeg/toolchain-android/include
+prefix=/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android
+exec_prefix=/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android
+libdir=/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/lib
+includedir=/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/include
 
 Name: FreeType 2
 URL: https://freetype.org

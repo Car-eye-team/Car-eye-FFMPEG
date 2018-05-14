@@ -35,17 +35,17 @@ if test $? -eq 0 ; then
   dynamic_libs=`/usr/bin/pkg-config --libs freetype2`
   static_libs=`/usr/bin/pkg-config --static --libs freetype2`
 else
-  prefix="/home/NDK/ffmpeg/toolchain-android"
-  exec_prefix="/home/NDK/ffmpeg/toolchain-android"
+  prefix="/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android"
+  exec_prefix="/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android"
 
-  includedir="/home/NDK/ffmpeg/toolchain-android/include"
-  libdir="/home/NDK/ffmpeg/toolchain-android/lib"
+  includedir="/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/include"
+  libdir="/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/lib"
 
   version=22.0.16
 
   cflags="-I${SYSROOT}$includedir/freetype2"
   dynamic_libs="-lfreetype"
-  static_libs="-lfreetype -lz -L/home/NDK/ffmpeg/toolchain-android/lib -lpng17 -lz -lm"
+  static_libs="-lfreetype -lz -L/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/lib -lpng17 -lz -lm"
   if test "${SYSROOT}$libdir" != "/usr/lib"   &&
      test "${SYSROOT}$libdir" != "/usr/lib64" ; then
     libs_L="-L${SYSROOT}$libdir"

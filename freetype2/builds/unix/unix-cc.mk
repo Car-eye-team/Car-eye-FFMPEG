@@ -12,7 +12,7 @@
 # fully.
 
 
-CC           := /home/NDK/ffmpeg/toolchain-android/bin/i686-linux-android-gcc --sysroot=/home/NDK/ffmpeg/toolchain-android/sysroot
+CC           := /home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-gcc --sysroot=/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/sysroot
 COMPILER_SEP := $(SEP)
 FT_LIBTOOL_DIR ?= $(BUILD_DIR)
 
@@ -79,7 +79,7 @@ T := -o$(space)
 #   We use our own FreeType configuration file.
 #
 CPPFLAGS := 
-CFLAGS   := -c -Wall -g -O2  -I/home/NDK/ffmpeg/toolchain-android/include/libpng17   -DFT_CONFIG_CONFIG_H="<ftconfig.h>"
+CFLAGS   := -c -Wall -g -O2  -I/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/include/libpng17   -DFT_CONFIG_CONFIG_H="<ftconfig.h>"
 
 # ANSIFLAGS: Put there the flags used to make your compiler ANSI-compliant.
 #
@@ -93,7 +93,7 @@ CC    := $(LIBTOOL) --mode=compile $(CCraw)
 
 # Linker flags.
 #
-LDFLAGS           :=  -lz -L/home/NDK/ffmpeg/toolchain-android/lib -lpng17  
+LDFLAGS           :=  -lz -L/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/lib -lpng17  
 LIB_CLOCK_GETTIME :=   # for ftbench
 
 
