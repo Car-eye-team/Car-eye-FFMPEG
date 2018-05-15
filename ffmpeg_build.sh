@@ -39,6 +39,6 @@ make clean
 --extra-libs="-lpng " \
 --extra-cxxflags="$CXX_FLAGS" || exit 1
 
-make  && make install || exit 1
+make  && make install && make clean || exit 1
 
 popd

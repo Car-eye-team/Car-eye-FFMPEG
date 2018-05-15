@@ -18,4 +18,4 @@ make clean
   --with-zlib=yes \
   --prefix="${TOOLCHAIN_PREFIX}" || exit 1
 
-make -j${NUMBER_OF_CORES} && make install || exit 1
+make -j${NUMBER_OF_CORES} && make install && make clean || exit 1
