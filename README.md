@@ -14,7 +14,7 @@ Run following commands to compile ffmpeg
 sudo apt-get --quiet --yes install build-essential git autoconf libtool pkg-config gperf gettext yasm python-lxml
 ./android_build.sh
 
-#contact us
+## contact us
 
 car-eye websit：www.car-eye.cn
 
