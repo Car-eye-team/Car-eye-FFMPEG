@@ -1,7 +1,7 @@
 /*****************************************************************************
  * bitstream-a.S: aarch64 bitstream functions
  *****************************************************************************
- * Copyright (C) 2014-2018 x264 project
+ * Copyright (C) 2014-2017 x264 project
  *
  * Authors: Janne Grunau <janne-x264@jannau.net>
  *
@@ -25,7 +25,7 @@
 
 #include "asm.S"
 
-function nal_escape_neon, export=1
+function x264_nal_escape_neon, export=1
     movi        v0.16b,  #0xff
     movi        v4.16b,  #4
     mov         w3,  #3

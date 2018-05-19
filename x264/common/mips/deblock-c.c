@@ -1,7 +1,7 @@
 /*****************************************************************************
  * deblock-c.c: msa deblocking
  *****************************************************************************
- * Copyright (C) 2015-2018 x264 project
+ * Copyright (C) 2015-2017 x264 project
  *
  * Authors: Neha Rana <neha.rana@imgtec.com>
  *
@@ -25,7 +25,6 @@
 
 #include "common/common.h"
 #include "macros.h"
-#include "deblock.h"
 
 #if !HIGH_BIT_DEPTH
 #define AVC_LPF_P0P1P2_OR_Q0Q1Q2( p3_or_q3_org_in, p0_or_q0_org_in,           \

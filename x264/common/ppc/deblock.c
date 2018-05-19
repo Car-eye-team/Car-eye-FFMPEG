@@ -1,7 +1,7 @@
 /*****************************************************************************
  * deblock.c: ppc deblocking
  *****************************************************************************
- * Copyright (C) 2007-2018 x264 project
+ * Copyright (C) 2007-2017 x264 project
  *
  * Authors: Guillaume Poirier <gpoirier@mplayerhq.hu>
  *
@@ -25,7 +25,6 @@
 
 #include "common/common.h"
 #include "ppccommon.h"
-#include "deblock.h"
 
 #if !HIGH_BIT_DEPTH
 #define transpose4x16(r0, r1, r2, r3)        \

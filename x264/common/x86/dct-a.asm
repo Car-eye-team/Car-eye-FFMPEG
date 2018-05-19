@@ -1,7 +1,7 @@
 ;*****************************************************************************
 ;* dct-a.asm: x86 transform and zigzag
 ;*****************************************************************************
-;* Copyright (C) 2003-2018 x264 project
+;* Copyright (C) 2003-2017 x264 project
 ;*
 ;* Authors: Holger Lubitz <holger@lubitz.org>
 ;*          Loren Merritt <lorenm@u.washington.edu>
@@ -510,7 +510,8 @@ cglobal add8x8_idct, 2,3,8
     add    r0, 4*FDEC_STRIDE
     pxor   m7, m7
     TAIL_CALL .skip_prologue, 0
-cglobal_label .skip_prologue
+global current_function %+ .skip_prologue
+.skip_prologue:
     ; TRANSPOSE4x4Q
     mova       xm0, [r1+ 0]
     mova       xm1, [r1+32]

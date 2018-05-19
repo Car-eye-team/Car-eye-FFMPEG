@@ -1,7 +1,7 @@
 /*****************************************************************************
  * depth.c: bit-depth conversion video filter
  *****************************************************************************
- * Copyright (C) 2010-2018 x264 project
+ * Copyright (C) 2010-2017 x264 project
  *
  * Authors: Oskar Arvidsson <oskar@irock.se>
  *
@@ -24,15 +24,7 @@
  *****************************************************************************/
 
 #include "video.h"
-#include "common/common.h"
-
-#define depth_filter x264_glue3(depth, BIT_DEPTH, filter)
-#if BIT_DEPTH == 8
-#define NAME "depth_8"
-#else
-#define NAME "depth_10"
-#endif
-
+#define NAME "depth"
 #define FAIL_IF_ERROR( cond, ... ) FAIL_IF_ERR( cond, NAME, __VA_ARGS__ )
 
 cli_vid_filter_t depth_filter;
@@ -82,10 +74,10 @@ static int csp_num_interleaved( int csp, int plane )
 static void dither_plane_##pitch( pixel *dst, int dst_stride, uint16_t *src, int src_stride, \
                                   int width, int height, int16_t *errors ) \
 { \
-    const int lshift = 16-BIT_DEPTH; \
-    const int rshift = 16-BIT_DEPTH+2; \
-    const int half = 1 << (16-BIT_DEPTH+1); \
-    const int pixel_max = (1 << BIT_DEPTH)-1; \
+    const int lshift = 16-X264_BIT_DEPTH; \
+    const int rshift = 16-X264_BIT_DEPTH+2; \
+    const int half = 1 << (16-X264_BIT_DEPTH+1); \
+    const int pixel_max = (1 << X264_BIT_DEPTH)-1; \
     memset( errors, 0, (width+1) * sizeof(int16_t) ); \
     for( int y = 0; y < height; y++, src += src_stride, dst += dst_stride ) \
     { \
@@ -145,7 +137,7 @@ static void dither_image( cli_image_t *out, cli_image_t *img, int16_t *error_buf
 static void scale_image( cli_image_t *output, cli_image_t *img )
 {
     int csp_mask = img->csp & X264_CSP_MASK;
-    const int shift = BIT_DEPTH - 8;
+    const int shift = X264_BIT_DEPTH - 8;
     for( int i = 0; i < img->planes; i++ )
     {
         uint8_t *src = img->plane[i];
@@ -225,7 +217,7 @@ static int init( hnd_t *handle, cli_vid_filter_t *filter, video_info_t *info,
             ret = 1;
     }
 
-    FAIL_IF_ERROR( bit_depth != BIT_DEPTH, "this filter supports only bit depth %d\n", BIT_DEPTH );
+    FAIL_IF_ERROR( bit_depth != X264_BIT_DEPTH, "this build supports only bit depth %d\n", X264_BIT_DEPTH );
     FAIL_IF_ERROR( ret, "unsupported bit depth conversion.\n" );
 
     /* only add the filter to the chain if it's needed */

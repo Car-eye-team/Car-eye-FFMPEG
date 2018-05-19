@@ -1,7 +1,7 @@
 /*****************************************************************************
  * dct-c.c: msa transform and zigzag
  *****************************************************************************
- * Copyright (C) 2015-2018 x264 project
+ * Copyright (C) 2015-2017 x264 project
  *
  * Authors: Rishikesh More <rishikesh.more@imgtec.com>
  *
@@ -25,7 +25,6 @@
 
 #include "common/common.h"
 #include "macros.h"
-#include "dct.h"
 
 #if !HIGH_BIT_DEPTH
 #define AVC_ITRANS_H( in0, in1, in2, in3, out0, out1, out2, out3 )          \

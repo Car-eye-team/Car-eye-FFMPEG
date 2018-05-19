@@ -21,6 +21,8 @@ make clean
 --enable-libfreetype \
 --disable-avdevice \
 --enable-pic \
+--enable-libx264 \
+--enable-gpl \
 --disable-ffserver \
 --disable-ffmpeg \
 --disable-ffplay \

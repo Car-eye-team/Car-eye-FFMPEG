@@ -1,7 +1,7 @@
 /*****************************************************************************
  * osdep.h: platform-specific code
  *****************************************************************************
- * Copyright (C) 2007-2018 x264 project
+ * Copyright (C) 2007-2017 x264 project
  *
  * Authors: Loren Merritt <lorenm@u.washington.edu>
  *          Laurent Aimar <fenrir@via.ecp.fr>
@@ -72,11 +72,11 @@ int x264_vsnprintf( char *s, size_t n, const char *fmt, va_list arg );
 #define isfinite finite
 #endif
 
-#if !HAVE_STRTOK_R && !defined(strtok_r)
+#ifdef _WIN32
+#ifndef strtok_r
 #define strtok_r(str,delim,save) strtok(str,delim)
 #endif
 
-#ifdef _WIN32
 #define utf8_to_utf16( utf8, utf16 )\
     MultiByteToWideChar( CP_UTF8, MB_ERR_INVALID_CHARS, utf8, -1, utf16, sizeof(utf16)/sizeof(wchar_t) )
 FILE *x264_fopen( const char *filename, const char *mode );
@@ -102,9 +102,6 @@ int x264_is_pipe( const char *path );
 #define x264_vfprintf vfprintf
 #define x264_is_pipe(x) 0
 #endif
-
-#define x264_glue3_expand(x,y,z) x##_##y##_##z
-#define x264_glue3(x,y,z) x264_glue3_expand(x,y,z)
 
 #ifdef _MSC_VER
 #define DECLARE_ALIGNED( var, n ) __declspec(align(n)) var

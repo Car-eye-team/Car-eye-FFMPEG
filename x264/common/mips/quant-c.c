@@ -1,7 +1,7 @@
 /*****************************************************************************
  * quant-c.c: msa quantization and level-run
  *****************************************************************************
- * Copyright (C) 2015-2018 x264 project
+ * Copyright (C) 2015-2017 x264 project
  *
  * Authors: Rishikesh More <rishikesh.more@imgtec.com>
  *
@@ -25,7 +25,6 @@
 
 #include "common/common.h"
 #include "macros.h"
-#include "quant.h"
 
 #if !HIGH_BIT_DEPTH
 static void avc_dequant_4x4_msa( int16_t *p_dct, int32_t pi_dequant_mf[6][16],

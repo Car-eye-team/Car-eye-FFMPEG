@@ -1,7 +1,7 @@
 /*****************************************************************************
  * predict.c: ppc intra prediction
  *****************************************************************************
- * Copyright (C) 2007-2018 x264 project
+ * Copyright (C) 2007-2017 x264 project
  *
  * Authors: Guillaume Poirier <gpoirier@mplayerhq.hu>
  *
@@ -24,9 +24,9 @@
  *****************************************************************************/
 
 #include "common/common.h"
-#include "ppccommon.h"
 #include "predict.h"
 #include "pixel.h"
+#include "ppccommon.h"
 
 #if !HIGH_BIT_DEPTH
 static void predict_8x8c_p_altivec( uint8_t *src )

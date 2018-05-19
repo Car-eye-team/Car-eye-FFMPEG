@@ -1,7 +1,7 @@
 /****************************************************************************
  * checkasm-arm.S: assembly check tool
  *****************************************************************************
- * Copyright (C) 2015-2018 x264 project
+ * Copyright (C) 2015-2017 x264 project
  *
  * Authors: Martin Storsjo <martin@martin.st>
  *
@@ -52,7 +52,7 @@ endconst
 
 .macro clobbercheck variant
 .equ pushed, 4*10
-function checkasm_call_\variant
+function x264_checkasm_call_\variant
     push        {r4-r11, lr}
 .ifc \variant, neon
     vpush       {q4-q7}
@@ -128,7 +128,7 @@ function checkasm_call_\variant
     mov         r12, #0
     str         r12, [r2]
     movrel      r0, error_message
-    blx         EXT(puts)
+    blx         X(puts)
 0:
     pop         {r0, r1}
 .ifc \variant, neon

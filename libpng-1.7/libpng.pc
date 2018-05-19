@@ -1,4 +1,4 @@
-prefix=/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android
+prefix=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include/libpng17

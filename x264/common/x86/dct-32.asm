@@ -1,7 +1,7 @@
 ;*****************************************************************************
 ;* dct-32.asm: x86_32 transform and zigzag
 ;*****************************************************************************
-;* Copyright (C) 2003-2018 x264 project
+;* Copyright (C) 2003-2017 x264 project
 ;*
 ;* Authors: Loren Merritt <lorenm@u.washington.edu>
 ;*          Holger Lubitz <holger@lubitz.org>
@@ -161,7 +161,8 @@ cextern hsub_mul
 
 %macro SUB8x8_DCT8 0
 cglobal sub8x8_dct8, 3,3,8
-cglobal_label .skip_prologue
+global current_function %+ .skip_prologue
+.skip_prologue:
     LOAD_DIFF8x4 0,1,2,3, none,none, r1, r2
     LOAD_DIFF8x4 4,5,6,7, none,none, r1, r2
 
@@ -210,7 +211,8 @@ SUB8x8_DCT8
 %macro ADD8x8_IDCT8 0
 cglobal add8x8_idct8, 2,2
     add r1, 128
-cglobal_label .skip_prologue
+global current_function %+ .skip_prologue
+.skip_prologue:
     UNSPILL_SHUFFLE r1, 1,2,3,5,6,7, -6,-4,-2,2,4,6
     IDCT8_1D d,0,1,2,3,4,5,6,7,[r1-128],[r1+0]
     mova   [r1+0], m4
@@ -441,7 +443,8 @@ global add8x8_idct8_mmx.skip_prologue
 %macro DCT_SUB8 0
 cglobal sub8x8_dct, 3,3
     add r2, 4*FDEC_STRIDE
-cglobal_label .skip_prologue
+global current_function %+ .skip_prologue
+.skip_prologue:
 %if cpuflag(ssse3)
     mova m7, [hsub_mul]
 %endif
@@ -473,7 +476,8 @@ cglobal_label .skip_prologue
 ;-----------------------------------------------------------------------------
 cglobal sub8x8_dct8, 3,3
     add r2, 4*FDEC_STRIDE
-cglobal_label .skip_prologue
+global current_function %+ .skip_prologue
+.skip_prologue:
 %if cpuflag(ssse3)
     mova m7, [hsub_mul]
     LOAD_DIFF8x4 0, 1, 2, 3, 4, 7, r1, r2-4*FDEC_STRIDE
@@ -521,7 +525,8 @@ DCT_SUB8
 %macro ADD8x8 0
 cglobal add8x8_idct, 2,2
     add r0, 4*FDEC_STRIDE
-cglobal_label .skip_prologue
+global current_function %+ .skip_prologue
+.skip_prologue:
     UNSPILL_SHUFFLE r1, 0,2,1,3, 0,1,2,3
     SBUTTERFLY qdq, 0, 1, 4
     SBUTTERFLY qdq, 2, 3, 4
@@ -564,7 +569,8 @@ ADD8x8
 %macro ADD8x8_IDCT8 0
 cglobal add8x8_idct8, 2,2
     add r0, 4*FDEC_STRIDE
-cglobal_label .skip_prologue
+global current_function %+ .skip_prologue
+.skip_prologue:
     UNSPILL r1, 1,2,3,5,6,7
     IDCT8_1D   w,0,1,2,3,4,5,6,7,[r1+0],[r1+64]
     SPILL r1, 6

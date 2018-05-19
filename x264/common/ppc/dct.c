@@ -1,7 +1,7 @@
 /*****************************************************************************
  * dct.c: ppc transform and zigzag
  *****************************************************************************
- * Copyright (C) 2003-2018 x264 project
+ * Copyright (C) 2003-2017 x264 project
  *
  * Authors: Guillaume Poirier <gpoirier@mplayerhq.hu>
  *          Eric Petit <eric.petit@lapsus.org>
@@ -26,7 +26,6 @@
 
 #include "common/common.h"
 #include "ppccommon.h"
-#include "dct.h"
 
 #if !HIGH_BIT_DEPTH
 #define VEC_DCT(a0,a1,a2,a3,b0,b1,b2,b3) \

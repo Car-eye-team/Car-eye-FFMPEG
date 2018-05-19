@@ -1,7 +1,7 @@
 /*****************************************************************************
  * pixel.h: ppc pixel metrics
  *****************************************************************************
- * Copyright (C) 2003-2018 x264 project
+ * Copyright (C) 2003-2017 x264 project
  *
  * Authors: Eric Petit <eric.petit@lapsus.org>
  *
@@ -26,7 +26,6 @@
 #ifndef X264_PPC_PIXEL_H
 #define X264_PPC_PIXEL_H
 
-#define x264_pixel_init_altivec x264_template(pixel_init_altivec)
 void x264_pixel_init_altivec( x264_pixel_function_t *pixf );
 
 #endif

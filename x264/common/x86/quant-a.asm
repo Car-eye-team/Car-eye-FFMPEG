@@ -1,7 +1,7 @@
 ;*****************************************************************************
 ;* quant-a.asm: x86 quantization and level-run
 ;*****************************************************************************
-;* Copyright (C) 2005-2018 x264 project
+;* Copyright (C) 2005-2017 x264 project
 ;*
 ;* Authors: Loren Merritt <lorenm@u.washington.edu>
 ;*          Fiona Glaser <fiona@x264.com>
@@ -1421,8 +1421,8 @@ cglobal denoise_dct, 4,4,4
 %endif
 %endmacro
 
-cextern_common decimate_table4
-cextern_common decimate_table8
+cextern decimate_table4
+cextern decimate_table8
 
 %macro DECIMATE4x4 1
 

@@ -1,7 +1,7 @@
 /*****************************************************************************
  * example.c: libx264 API usage example
  *****************************************************************************
- * Copyright (C) 2014-2018 x264 project
+ * Copyright (C) 2014-2017 x264 project
  *
  * Authors: Anton Mitrofanov <BugMaster@narod.ru>
  *
@@ -68,7 +68,6 @@ int main( int argc, char **argv )
         goto fail;
 
     /* Configure non-default params */
-    param.i_bitdepth = 8;
     param.i_csp = X264_CSP_I420;
     param.i_width  = width;
     param.i_height = height;

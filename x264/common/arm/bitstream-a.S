@@ -1,7 +1,7 @@
 /*****************************************************************************
  * bitstream-a.S: arm bitstream functions
  *****************************************************************************
- * Copyright (C) 2014-2018 x264 project
+ * Copyright (C) 2014-2017 x264 project
  *
  * Authors: Janne Grunau <janne-x264@jannau.net>
  *
@@ -25,7 +25,7 @@
 
 #include "asm.S"
 
-function nal_escape_neon
+function x264_nal_escape_neon
     push        {r4-r5,lr}
     vmov.u8     q0,  #0xff
     vmov.u8     q8,  #4

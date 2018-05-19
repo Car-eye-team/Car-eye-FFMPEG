@@ -1,7 +1,7 @@
 /*****************************************************************************
  * pixel.c: ppc pixel metrics
  *****************************************************************************
- * Copyright (C) 2003-2018 x264 project
+ * Copyright (C) 2003-2017 x264 project
  *
  * Authors: Eric Petit <eric.petit@lapsus.org>
  *          Guillaume Poirier <gpoirier@mplayerhq.hu>
@@ -26,7 +26,6 @@
 
 #include "common/common.h"
 #include "ppccommon.h"
-#include "pixel.h"
 
 #if !HIGH_BIT_DEPTH
 /***********************************************************************
@@ -1316,7 +1315,7 @@ static int pixel_ssd_8x8_altivec( uint8_t *pix1, intptr_t i_stride_pix1,
 /****************************************************************************
  * variance
  ****************************************************************************/
-static uint64_t pixel_var_16x16_altivec( uint8_t *pix, intptr_t i_stride )
+static uint64_t x264_pixel_var_16x16_altivec( uint8_t *pix, intptr_t i_stride )
 {
     ALIGNED_16(uint32_t sum_tab[4]);
     ALIGNED_16(uint32_t sqr_tab[4]);
@@ -1343,7 +1342,7 @@ static uint64_t pixel_var_16x16_altivec( uint8_t *pix, intptr_t i_stride )
     return sum + ((uint64_t)sqr<<32);
 }
 
-static uint64_t pixel_var_8x8_altivec( uint8_t *pix, intptr_t i_stride )
+static uint64_t x264_pixel_var_8x8_altivec( uint8_t *pix, intptr_t i_stride )
 {
     ALIGNED_16(uint32_t sum_tab[4]);
     ALIGNED_16(uint32_t sqr_tab[4]);
@@ -1635,7 +1634,7 @@ static const vec_u8_t hadamard_permtab[] =
        0x1C,0x0C,0x1D,0x0D, 0x1E,0x0E,0x1F,0x0F )
  };
 
-static uint64_t pixel_hadamard_ac_16x16_altivec( uint8_t *pix, intptr_t stride )
+static uint64_t x264_pixel_hadamard_ac_16x16_altivec( uint8_t *pix, intptr_t stride )
 {
     int idx =  ((uintptr_t)pix & 8) >> 3;
     vec_u8_t permh = hadamard_permtab[idx];
@@ -1647,7 +1646,7 @@ static uint64_t pixel_hadamard_ac_16x16_altivec( uint8_t *pix, intptr_t stride )
     return ((sum>>34)<<32) + ((uint32_t)sum>>1);
 }
 
-static uint64_t pixel_hadamard_ac_16x8_altivec( uint8_t *pix, intptr_t stride )
+static uint64_t x264_pixel_hadamard_ac_16x8_altivec( uint8_t *pix, intptr_t stride )
 {
     int idx =  ((uintptr_t)pix & 8) >> 3;
     vec_u8_t permh = hadamard_permtab[idx];
@@ -1657,7 +1656,7 @@ static uint64_t pixel_hadamard_ac_16x8_altivec( uint8_t *pix, intptr_t stride )
     return ((sum>>34)<<32) + ((uint32_t)sum>>1);
 }
 
-static uint64_t pixel_hadamard_ac_8x16_altivec( uint8_t *pix, intptr_t stride )
+static uint64_t x264_pixel_hadamard_ac_8x16_altivec( uint8_t *pix, intptr_t stride )
 {
     vec_u8_t perm = hadamard_permtab[ (((uintptr_t)pix & 8) >> 3) ];
     uint64_t sum = pixel_hadamard_ac_altivec( pix, stride, perm );
@@ -1665,7 +1664,7 @@ static uint64_t pixel_hadamard_ac_8x16_altivec( uint8_t *pix, intptr_t stride )
     return ((sum>>34)<<32) + ((uint32_t)sum>>1);
 }
 
-static uint64_t pixel_hadamard_ac_8x8_altivec( uint8_t *pix, intptr_t stride )
+static uint64_t x264_pixel_hadamard_ac_8x8_altivec( uint8_t *pix, intptr_t stride )
 {
     vec_u8_t perm = hadamard_permtab[ (((uintptr_t)pix & 8) >> 3) ];
     uint64_t sum = pixel_hadamard_ac_altivec( pix, stride, perm );
@@ -1740,7 +1739,7 @@ SATD_X( 4x4 )
 
 
 #define INTRA_MBCMP_8x8( mbcmp )\
-static void intra_##mbcmp##_x3_8x8_altivec( uint8_t *fenc, uint8_t edge[36], int res[3] )\
+void intra_##mbcmp##_x3_8x8_altivec( uint8_t *fenc, uint8_t edge[36], int res[3] )\
 {\
     ALIGNED_8( uint8_t pix[8*FDEC_STRIDE] );\
     x264_predict_8x8_v_c( pix, edge );\
@@ -1755,7 +1754,7 @@ INTRA_MBCMP_8x8(sad)
 INTRA_MBCMP_8x8(sa8d)
 
 #define INTRA_MBCMP( mbcmp, size, pred1, pred2, pred3, chroma )\
-static void intra_##mbcmp##_x3_##size##x##size##chroma##_altivec( uint8_t *fenc, uint8_t *fdec, int res[3] )\
+void intra_##mbcmp##_x3_##size##x##size##chroma##_altivec( uint8_t *fenc, uint8_t *fdec, int res[3] )\
 {\
     x264_predict_##size##x##size##chroma##_##pred1##_c( fdec );\
     res[0] = pixel_##mbcmp##_##size##x##size##_altivec( fdec, FDEC_STRIDE, fenc, FENC_STRIDE );\
@@ -1833,13 +1832,13 @@ void x264_pixel_init_altivec( x264_pixel_function_t *pixf )
 
     pixf->intra_sa8d_x3_8x8   = intra_sa8d_x3_8x8_altivec;
 
-    pixf->var[PIXEL_16x16] = pixel_var_16x16_altivec;
-    pixf->var[PIXEL_8x8]   = pixel_var_8x8_altivec;
+    pixf->var[PIXEL_16x16] = x264_pixel_var_16x16_altivec;
+    pixf->var[PIXEL_8x8]   = x264_pixel_var_8x8_altivec;
 
-    pixf->hadamard_ac[PIXEL_16x16] = pixel_hadamard_ac_16x16_altivec;
-    pixf->hadamard_ac[PIXEL_16x8]  = pixel_hadamard_ac_16x8_altivec;
-    pixf->hadamard_ac[PIXEL_8x16]  = pixel_hadamard_ac_8x16_altivec;
-    pixf->hadamard_ac[PIXEL_8x8]   = pixel_hadamard_ac_8x8_altivec;
+    pixf->hadamard_ac[PIXEL_16x16] = x264_pixel_hadamard_ac_16x16_altivec;
+    pixf->hadamard_ac[PIXEL_16x8]  = x264_pixel_hadamard_ac_16x8_altivec;
+    pixf->hadamard_ac[PIXEL_8x16]  = x264_pixel_hadamard_ac_8x16_altivec;
+    pixf->hadamard_ac[PIXEL_8x8]   = x264_pixel_hadamard_ac_8x8_altivec;
 
     pixf->ssim_4x4x2_core = ssim_4x4x2_core_altivec;
 #endif // !HIGH_BIT_DEPTH

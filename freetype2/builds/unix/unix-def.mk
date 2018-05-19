@@ -50,7 +50,7 @@ DISTCLEAN += $(OBJ_BUILD)/config.cache  \
 
 # Standard installation variables.
 #
-prefix       := /home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android
+prefix       := /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android
 exec_prefix  := ${prefix}
 libdir       := ${exec_prefix}/lib
 bindir       := ${exec_prefix}/bin
@@ -66,7 +66,7 @@ version_info := 22:0:16
 PKG_CONFIG         := /usr/bin/pkg-config
 REQUIRES_PRIVATE   := libpng
 LIBS_PRIVATE       := -lz
-LIBSSTATIC_CONFIG  := -lfreetype -lz -L/home/NDK/FFMPEG/Car-eye-FFMPEG/toolchain-android/lib -lpng17 -lz -lm
+LIBSSTATIC_CONFIG  := -lfreetype -lz -L/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib -lpng17 -lz -lm
 build_libtool_libs := 
 ft_version         := 22.0.16
 

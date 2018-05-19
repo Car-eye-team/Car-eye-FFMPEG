@@ -1,7 +1,7 @@
 /*****************************************************************************
  * resize.c: resize video filter
  *****************************************************************************
- * Copyright (C) 2010-2018 x264 project
+ * Copyright (C) 2010-2017 x264 project
  *
  * Authors: Steven Walters <kemuri9@gmail.com>
  *
@@ -24,7 +24,6 @@
  *****************************************************************************/
 
 #include "video.h"
-
 #define NAME "resize"
 #define FAIL_IF_ERROR( cond, ... ) FAIL_IF_ERR( cond, NAME, __VA_ARGS__ )
 
@@ -212,7 +211,7 @@ static int pick_closest_supported_csp( int csp )
     }
     // now determine high depth
     for( int i = 0; i < pix_desc->nb_components; i++ )
-        if( pix_desc->comp[i].depth > 8 )
+        if( pix_desc->comp[i].depth_minus1 >= 8 )
             ret |= X264_CSP_HIGH_DEPTH;
     return ret;
 }
@@ -363,7 +362,7 @@ static int handle_opts( const char * const *optlist, char **opts, video_info_t *
     return 0;
 }
 
-static int init_sws_context( resizer_hnd_t *h )
+static int x264_init_sws_context( resizer_hnd_t *h )
 {
     if( h->ctx )
         sws_freeContext( h->ctx );
@@ -406,7 +405,7 @@ static int check_resizer( resizer_hnd_t *h, cli_pic_t *in )
             return -1;
         h->buffer_allocated = 1;
     }
-    FAIL_IF_ERROR( init_sws_context( h ), "swscale init failed\n" );
+    FAIL_IF_ERROR( x264_init_sws_context( h ), "swscale init failed\n" );
     return 0;
 }
 

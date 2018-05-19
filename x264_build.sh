@@ -28,6 +28,6 @@ echo $CFLAGS
   --prefix="${TOOLCHAIN_PREFIX}" \
   --disable-cli || exit 1
 
-make -j${NUMBER_OF_CORES} install || exit 1
+make -j${NUMBER_OF_CORES} install && make clean || exit 1
 
 popd

@@ -1,7 +1,7 @@
 /*****************************************************************************
  * predict-c.c: msa intra prediction
  *****************************************************************************
- * Copyright (C) 2015-2018 x264 project
+ * Copyright (C) 2015-2017 x264 project
  *
  * Authors: Mandar Sahastrabuddhe <mandar.sahastrabuddhe@imgtec.com>
  *
@@ -25,7 +25,6 @@
 
 #include "common/common.h"
 #include "macros.h"
-#include "predict.h"
 
 #if !HIGH_BIT_DEPTH
 static void intra_predict_vert_4x4_msa( uint8_t *p_src, uint8_t *p_dst,

@@ -1,7 +1,7 @@
 /*****************************************************************************
  * input.h: file input
  *****************************************************************************
- * Copyright (C) 2003-2018 x264 project
+ * Copyright (C) 2003-2017 x264 project
  *
  * Authors: Laurent Aimar <fenrir@via.ecp.fr>
  *          Loren Merritt <lorenm@u.washington.edu>
@@ -102,8 +102,7 @@ typedef struct
 extern const cli_input_t raw_input;
 extern const cli_input_t y4m_input;
 extern const cli_input_t avs_input;
-extern const cli_input_t thread_8_input;
-extern const cli_input_t thread_10_input;
+extern const cli_input_t thread_input;
 extern const cli_input_t lavf_input;
 extern const cli_input_t ffms_input;
 extern const cli_input_t timecode_input;
@@ -138,10 +137,8 @@ const x264_cli_csp_t *x264_cli_get_csp( int csp );
 
 typedef struct
 {
-    int64_t file_size;
     int align_mask;
 #ifdef _WIN32
-    int page_mask;
     BOOL (WINAPI *prefetch_virtual_memory)( HANDLE, ULONG_PTR, PVOID, ULONG );
     HANDLE process_handle;
     HANDLE map_handle;

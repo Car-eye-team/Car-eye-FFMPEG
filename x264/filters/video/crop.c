@@ -1,7 +1,7 @@
 /*****************************************************************************
  * crop.c: crop video filter
  *****************************************************************************
- * Copyright (C) 2010-2018 x264 project
+ * Copyright (C) 2010-2017 x264 project
  *
  * Authors: Steven Walters <kemuri9@gmail.com>
  *          James Darnley <james.darnley@gmail.com>
@@ -25,7 +25,6 @@
  *****************************************************************************/
 
 #include "video.h"
-
 #define NAME "crop"
 #define FAIL_IF_ERROR( cond, ... ) FAIL_IF_ERR( cond, NAME, __VA_ARGS__ )
 

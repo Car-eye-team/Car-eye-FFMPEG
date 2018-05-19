@@ -1,7 +1,7 @@
 /*****************************************************************************
  * timecode.c: timecode file input
  *****************************************************************************
- * Copyright (C) 2010-2018 x264 project
+ * Copyright (C) 2010-2017 x264 project
  *
  * Authors: Yusuke Nakamura <muken.the.vfrmaniac@gmail.com>
  *
@@ -24,7 +24,6 @@
  *****************************************************************************/
 
 #include "input.h"
-
 #define FAIL_IF_ERROR( cond, ... ) FAIL_IF_ERR( cond, "timecode", __VA_ARGS__ )
 
 typedef struct

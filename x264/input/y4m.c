@@ -1,7 +1,7 @@
 /*****************************************************************************
  * y4m.c: y4m input
  *****************************************************************************
- * Copyright (C) 2003-2018 x264 project
+ * Copyright (C) 2003-2017 x264 project
  *
  * Authors: Laurent Aimar <fenrir@via.ecp.fr>
  *          Loren Merritt <lorenm@u.washington.edu>
@@ -25,7 +25,6 @@
  *****************************************************************************/
 
 #include "input.h"
-
 #define FAIL_IF_ERROR( cond, ... ) FAIL_IF_ERR( cond, "y4m", __VA_ARGS__ )
 
 typedef struct

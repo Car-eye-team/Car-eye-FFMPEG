@@ -1,7 +1,7 @@
 /*****************************************************************************
  * x264dll: x264 DLLMain for win32
  *****************************************************************************
- * Copyright (C) 2009-2018 x264 project
+ * Copyright (C) 2009-2017 x264 project
  *
  * Authors: Anton Mitrofanov <BugMaster@narod.ru>
  *
@@ -23,7 +23,7 @@
  * For more information, contact us at licensing@x264.com.
  *****************************************************************************/
 
-#include "common/base.h"
+#include "common/common.h"
 #include <windows.h>
 
 /* Callback for our DLL so we can initialize pthread */
