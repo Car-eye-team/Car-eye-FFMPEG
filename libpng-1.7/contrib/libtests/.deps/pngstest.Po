@@ -1,5 +1,5 @@
 contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stddef.h \
+ /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include/stddef.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/stdlib.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/sys/cdefs.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/sys/cdefs_elf.h \
@@ -10,7 +10,7 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/alloca.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/strings.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/sys/types.h \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdint.h \
+ /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include/stdint.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/stdint.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/machine/wchar_limits.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/types.h \
@@ -22,15 +22,12 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/posix_types.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/stddef.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/compiler.h \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/asm/posix_types.h \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/features.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm/posix_types.h \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm/posix_types_32.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm-generic/posix_types.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/sys/sysmacros.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/memory.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/stdio.h \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdarg.h \
+ /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include/stdarg.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/errno.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/errno.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm/errno.h \
@@ -38,8 +35,8 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm-generic/errno-base.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/ctype.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/math.h \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/limits.h \
- /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/syslimits.h \
+ /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include-fixed/limits.h \
+ /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include-fixed/syslimits.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/limits.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/sys/limits.h \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/limits.h \
@@ -53,7 +50,7 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
  /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/time.h \
  contrib/libtests/../tools/sRGB.h contrib/libtests/pngstest-errors.h
 
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stddef.h:
+/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include/stddef.h:
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/stdlib.h:
 
@@ -75,7 +72,7 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/sys/types.h:
 
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdint.h:
+/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include/stdint.h:
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/stdint.h:
 
@@ -99,13 +96,7 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/linux/compiler.h:
 
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/asm/posix_types.h:
-
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/features.h:
-
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm/posix_types.h:
-
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm/posix_types_32.h:
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/asm-generic/posix_types.h:
 
@@ -115,7 +106,7 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/stdio.h:
 
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include/stdarg.h:
+/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include/stdarg.h:
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/errno.h:
 
@@ -131,9 +122,9 @@ contrib/libtests/pngstest.o: contrib/libtests/pngstest.c \
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/math.h:
 
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/limits.h:
+/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include-fixed/limits.h:
 
-/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9/include-fixed/syslimits.h:
+/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9/include-fixed/syslimits.h:
 
 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/include/limits.h:
 

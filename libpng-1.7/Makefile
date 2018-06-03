@@ -94,7 +94,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
-host_triplet = x86-unknown-none
+host_triplet = arm-unknown-linux-androideabi
 check_PROGRAMS = pngtest$(EXEEXT) pngunknown$(EXEEXT) \
 	pngstest$(EXEEXT) pngvalid$(EXEEXT) pngimage$(EXEEXT) \
 	pngcp$(EXEEXT) $(am__EXEEXT_1)
@@ -486,19 +486,19 @@ pkgincludedir = $(includedir)/$(PNGLIB_BASENAME)
 ACLOCAL = ${SHELL} /home/NDK/ffmpeg/Car-eye-FFMPEG/libpng-1.7/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AR = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-ar
-AS = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-as
+AR = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-ar
+AS = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-as
 AUTOCONF = ${SHELL} /home/NDK/ffmpeg/Car-eye-FFMPEG/libpng-1.7/missing autoconf
 AUTOHEADER = ${SHELL} /home/NDK/ffmpeg/Car-eye-FFMPEG/libpng-1.7/missing autoheader
 AUTOMAKE = ${SHELL} /home/NDK/ffmpeg/Car-eye-FFMPEG/libpng-1.7/missing automake-1.15
 AWK = gawk
-CC = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot
-CCAS = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot
+CC = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot
+CCAS = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot
 CCASDEPMODE = depmode=gcc3
 CCASFLAGS = -g -O2
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
-CPP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-cpp
+CPP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-cpp
 CPPFLAGS = 
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
@@ -509,7 +509,7 @@ DEPDIR = .deps
 # checks input tokens for validity - effectively it performs part of the ANSI-C
 # parsing - and therefore fails with the .df files.  configure.ac has special
 # checks for this and sets DFNCPP appropriately.
-DFNCPP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-cpp -E
+DFNCPP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-cpp -E
 DLLTOOL = false
 DSYMUTIL = 
 DUMPBIN = 
@@ -525,7 +525,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-ld
+LD = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-ld
 LDFLAGS = 
 LIBOBJS = 
 LIBS = -lz -lm 
@@ -538,9 +538,9 @@ MAINT = #
 MAKEINFO = ${SHELL} /home/NDK/ffmpeg/Car-eye-FFMPEG/libpng-1.7/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
-NM = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-nm
+NM = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-nm
 NMEDIT = 
-OBJDUMP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-objdump
+OBJDUMP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -562,11 +562,11 @@ PNGLIB_VERSION = 1.7.0beta89
 # AM_CFLAGS)
 PNG_COPTS = 
 PNG_PREFIX = 
-RANLIB = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-ranlib
+RANLIB = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-ranlib
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-STRIP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-strip
+STRIP = /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-strip
 SYMBOL_PREFIX = 
 VERSION = 1.7.0beta89
 abs_builddir = /home/NDK/ffmpeg/Car-eye-FFMPEG/libpng-1.7
@@ -596,10 +596,10 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86-unknown-none
-host_alias = x86
-host_cpu = x86
-host_os = none
+host = arm-unknown-linux-androideabi
+host_alias = arm-linux-androideabi
+host_cpu = arm
+host_os = linux-androideabi
 host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include

@@ -16,6 +16,11 @@ case $1 in
     NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"
     CFLAGS="${CFLAGS} -mfpu=neon"
   ;;
+  arm64-v8a)
+    NDK_ABI='aarch64'
+    NDK_TOOLCHAIN_ABI='aarch64-linux-android'
+    NDK_CROSS_PREFIX="${NDK_TOOLCHAIN_ABI}"	
+  ;;	
   x86)
     NDK_ABI='x86'
     NDK_TOOLCHAIN_ABI='x86'

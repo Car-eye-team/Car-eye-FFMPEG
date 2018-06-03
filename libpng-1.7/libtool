@@ -63,13 +63,13 @@ macro_version=2.4.6
 macro_revision=2.4.6
 
 # Assembler program.
-AS="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-as"
+AS="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-as"
 
 # DLL creation program.
 DLLTOOL="false"
 
 # Object dumper program.
-OBJDUMP="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-objdump"
+OBJDUMP="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-objdump"
 
 # Whether or not to build shared libraries.
 build_libtool_libs=no
@@ -90,9 +90,9 @@ shared_archive_member_spec=
 PATH_SEPARATOR=":"
 
 # The host system.
-host_alias=x86
-host=x86-unknown-none
-host_os=none
+host_alias=arm-linux-androideabi
+host=arm-unknown-linux-androideabi
+host_os=linux-androideabi
 
 # The build system.
 build_alias=
@@ -100,7 +100,7 @@ build=x86_64-unknown-linux-gnu
 build_os=linux-gnu
 
 # A BSD- or MS-compatible name lister.
-NM="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-nm"
+NM="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-nm"
 
 # Whether we need soft or hard links.
 LN_S="ln -s"
@@ -130,7 +130,7 @@ to_host_file_cmd=func_convert_file_noop
 to_tool_file_cmd=func_convert_file_noop
 
 # Method to check whether dependent libraries are shared objects.
-deplibs_check_method="unknown"
+deplibs_check_method="pass_all"
 
 # Command to use when deplibs_check_method = "file_magic".
 file_magic_cmd="\$MAGIC_CMD"
@@ -145,7 +145,7 @@ want_nocaseglob="no"
 sharedlib_from_linklib_cmd="printf %s\\n"
 
 # The archiver.
-AR="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-ar"
+AR="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-ar"
 
 # Flags to create an archive.
 AR_FLAGS="cru"
@@ -154,10 +154,10 @@ AR_FLAGS="cru"
 archiver_list_spec="@"
 
 # A symbol stripping program.
-STRIP="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-strip"
+STRIP="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-strip"
 
 # Commands used to install an old-style archive.
-RANLIB="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-ranlib"
+RANLIB="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-ranlib"
 old_postinstall_cmds="chmod 644 \$oldlib~\$RANLIB \$tool_oldlib"
 old_postuninstall_cmds=""
 
@@ -165,7 +165,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot"
+LTCC="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot"
 
 # LTCC compiler flags.
 LTCFLAGS="-g -O2"
@@ -235,13 +235,13 @@ extract_expsyms_cmds=""
 
 # Variables whose values should be saved in libtool wrapper scripts and
 # restored at link time.
-variables_saved_for_relink="PATH  LD_RUN_PATH GCC_EXEC_PREFIX COMPILER_PATH LIBRARY_PATH"
+variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COMPILER_PATH LIBRARY_PATH"
 
 # Do we need the "lib" prefix for modules?
-need_lib_prefix=unknown
+need_lib_prefix=no
 
 # Do we need a version for libraries?
-need_version=unknown
+need_version=no
 
 # Library versioning type.
 version_type=none
@@ -250,20 +250,20 @@ version_type=none
 runpath_var=LD_RUN_PATH
 
 # Shared library path variable.
-shlibpath_var=
+shlibpath_var=LD_LIBRARY_PATH
 
 # Is shlibpath searched before the hard-coded library search path?
-shlibpath_overrides_runpath=unknown
+shlibpath_overrides_runpath=yes
 
 # Format of library name prefix.
 libname_spec="lib\$name"
 
 # List of archive names.  First name is the real one, the rest are links.
 # The last name is the one that the linker finds with -lNAME
-library_names_spec=""
+library_names_spec="\$libname\$release\$shared_ext"
 
 # The coded name of the library, if different from the real name.
-soname_spec=""
+soname_spec="\$libname\$release\$shared_ext"
 
 # Permission mode override for installation of shared libraries.
 install_override_mode=""
@@ -282,10 +282,10 @@ finish_cmds=""
 finish_eval=""
 
 # Whether we should hardcode library paths into libraries.
-hardcode_into_libs=no
+hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/i686-linux-android/4.9 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/i686-linux-android/lib /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/lib "
+sys_lib_search_path_spec="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc/arm-linux-androideabi/4.9 /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/lib/gcc /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/arm-linux-androideabi/lib /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot/usr/lib "
 
 # Detected run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib /usr/lib"
@@ -303,12 +303,12 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Commands to strip libraries.
-old_striplib="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-strip --strip-debug"
-striplib="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-strip --strip-unneeded"
+old_striplib="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-strip --strip-debug"
+striplib="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-strip --strip-unneeded"
 
 
 # The linker used to build libraries.
-LD="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-ld"
+LD="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-ld"
 
 # How to create reloadable object files.
 reload_flag=" -r"
@@ -318,7 +318,7 @@ reload_cmds="\$LD\$reload_flag -o \$output\$reload_objs"
 old_archive_cmds="\$AR \$AR_FLAGS \$oldlib\$oldobjs~\$RANLIB \$tool_oldlib"
 
 # A language specific compiler.
-CC="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot"
+CC="/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot"
 
 # Is the compiler the GNU compiler?
 with_gcc=yes
@@ -361,7 +361,10 @@ old_archive_from_expsyms_cmds=""
 
 # Commands used to build a shared archive.
 archive_cmds="\$CC -shared \$pic_flag \$libobjs \$deplibs \$compiler_flags \$wl-soname \$wl\$soname -o \$lib"
-archive_expsym_cmds="\$CC -shared \$pic_flag \$libobjs \$deplibs \$compiler_flags \$wl-soname \$wl\$soname \$wl-retain-symbols-file \$wl\$export_symbols -o \$lib"
+archive_expsym_cmds="echo \\\"{ global:\\\" > \$output_objdir/\$libname.ver~
+            cat \$export_symbols | sed -e \\\"s/\\\\(.*\\\\)/\\\\1;/\\\" >> \$output_objdir/\$libname.ver~
+            echo \\\"local: *; };\\\" >> \$output_objdir/\$libname.ver~
+            \$CC -shared \$pic_flag \$libobjs \$deplibs \$compiler_flags \$wl-soname \$wl\$soname \$wl-version-script \$wl\$output_objdir/\$libname.ver -o \$lib"
 
 # Commands used to build a loadable module if different from building
 # a shared archive.
@@ -379,7 +382,7 @@ no_undefined_flag=""
 
 # Flag to hardcode $libdir into a binary during linking.
 # This must work even if $libdir does not exist
-hardcode_libdir_flag_spec="\$wl-rpath \$wl\$libdir"
+hardcode_libdir_flag_spec="-L\$libdir"
 
 # Whether we need a single "-rpath" flag with a separated argument.
 hardcode_libdir_separator=""

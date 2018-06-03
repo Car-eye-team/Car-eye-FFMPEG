@@ -12,7 +12,7 @@
 # fully.
 
 
-CC           := /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/i686-linux-android-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot
+CC           := /home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/bin/arm-linux-androideabi-gcc --sysroot=/home/NDK/ffmpeg/Car-eye-FFMPEG/toolchain-android/sysroot
 COMPILER_SEP := $(SEP)
 FT_LIBTOOL_DIR ?= $(BUILD_DIR)
 

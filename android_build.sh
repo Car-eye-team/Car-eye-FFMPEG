@@ -4,11 +4,6 @@
 
 BASEDIR=$(pwd)
 TOOLCHAIN_PREFIX=${BASEDIR}/toolchain-android
-# Applying required patches
-patch  -p0 -N --dry-run --silent -f fontconfig/src/fcxml.c < android_donot_use_lconv.patch 1>/dev/null
-if [ $? -eq 0 ]; then
-  patch -p0 -f fontconfig/src/fcxml.c < android_donot_use_lconv.patch
-fi
 
 for i in "${SUPPORTED_ARCHITECTURES[@]}"
 do
@@ -24,6 +19,9 @@ do
   #./fontconfig_build.sh $i $BASEDIR 1 || exit 1
   #./libass_build.sh $i $BASEDIR 1 || exit 1
   ./ffmpeg_build.sh $i $BASEDIR 0 || exit 1
+cp   ${TOOLCHAIN_PREFIX}/lib/libfreetype.a  $BASEDIR/build/$i
+cp   ${TOOLCHAIN_PREFIX}/lib/libx264.a  $BASEDIR/build/$i
+cp   ${TOOLCHAIN_PREFIX}/lib/libpng17.a  $BASEDIR/build/$i
 done
 
 rm -rf ${TOOLCHAIN_PREFIX}
