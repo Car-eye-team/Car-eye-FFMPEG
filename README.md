@@ -6,6 +6,7 @@
 ## Supported Architecture
 * ARMV7
 * X86
+* ARMV8A 64 BIT
 
 ## Compile in android (Android studio 3.0+)
 * Set environment variable
