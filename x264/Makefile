@@ -211,11 +211,11 @@ $(OBJS) $(OBJASM) $(OBJSO) $(OBJCLI) $(OBJCHK) $(OBJEXAMPLE): .depend
 
 %.o: %.asm common/x86/x86inc.asm common/x86/x86util.asm
 	$(AS) $(ASFLAGS) -o $@ $<
-	-@ $(if $(STRIP), $(STRIP) -x $@) # delete local/anonymous symbols, so they don't show up in oprofile
+	-@ $(if $(STRIP), $(STRIP) -x -K \$$a -K \$$t -K \$$d $@) # delete local/anonymous symbols, so they don't show up in oprofile
 
 %.o: %.S
 	$(AS) $(ASFLAGS) -o $@ $<
-	-@ $(if $(STRIP), $(STRIP) -x $@) # delete local/anonymous symbols, so they don't show up in oprofile
+	-@ $(if $(STRIP), $(STRIP) -x -K \$$a -K \$$t -K \$$d $@) # delete local/anonymous symbols, so they don't show up in oprofile
 
 %.dll.o: %.rc x264.h
 	$(RC) $(RCFLAGS)$@ -DDLL $<
