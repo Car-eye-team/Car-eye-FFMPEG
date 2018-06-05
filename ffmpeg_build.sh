@@ -20,7 +20,6 @@ make clean
 --sysroot="$NDK_SYSROOT" \
 --enable-libfreetype \
 --disable-avdevice \
---enable-small \
 --disable-vda \
 --disable-iconv \
 --disable-outdevs \
@@ -44,8 +43,8 @@ make clean
 --enable-cross-compile \
 --pkg-config="${2}/ffmpeg-pkg-config" \
 --prefix="${2}/build/${1}" \
---extra-cflags="-I${TOOLCHAIN_PREFIX}/include -I${TOOLCHAIN_PREFIX}/include/freetype2 " \
---extra-ldflags="-L${TOOLCHAIN_PREFIX}/lib  " \
+--extra-cflags="-I${TOOLCHAIN_PREFIX}/include -I${TOOLCHAIN_PREFIX}/include/freetype2 $CFLAGS" \
+--extra-ldflags="-L${TOOLCHAIN_PREFIX}/lib $LDFLAGS" \
 --extra-libs="-lpng " \
 --extra-cxxflags="$CXX_FLAGS" || exit 1
 

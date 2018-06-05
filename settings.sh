@@ -13,7 +13,7 @@ NUMBER_OF_CORES=$(nproc)
 HOST_UNAME=$(uname -m)
 TARGET_OS=linux
 
-CFLAGS='-Os -fpic -marm'
+CFLAGS='-O3 -Wall -pipe -ffast-math -fstrict-aliasing -Werror=strict-aliasing -Wno-psabi -Wa,--noexecstack -DANDROID'
 LDFLAGS=''
 
 FFMPEG_PKG_CONFIG="$(pwd)/ffmpeg-pkg-config"
